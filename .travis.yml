@@ -1,4 +1,7 @@
 language: ruby
+arch:
+  - amd64
+  - ppc64le
 rvm:
   - 1.8.7
   - ree
@@ -14,5 +17,9 @@ matrix:
   allow_failures:
     - rvm: ruby-head
     - rvm: jruby-head
+    - rvm: ruby-head
+      arch: ppc64le
+    - rvm: jruby-head
+      arch: ppc64le
 before_install:
   - gem update bundler
